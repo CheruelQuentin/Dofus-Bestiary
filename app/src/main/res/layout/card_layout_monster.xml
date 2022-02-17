@@ -29,9 +29,37 @@
             android:layout_width="236dp"
             android:layout_height="39dp"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="4dp"
             app:layout_constraintLeft_toRightOf="@+id/item_monsterImage"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_monsterPV"
+            android:layout_width="196dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintLeft_toRightOf="@+id/item_monsterImage"
+            app:layout_constraintTop_toTopOf="@id/item_monsterName" />
+
+        <TextView
+            android:id="@+id/item_monsterPA"
+            android:layout_width="196dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintLeft_toRightOf="@+id/item_monsterImage"
+            app:layout_constraintTop_toTopOf="@id/item_monsterPV" />
+
+        <TextView
+            android:id="@+id/item_monsterPM"
+            android:layout_width="196dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintLeft_toRightOf="@+id/item_monsterImage"
+            app:layout_constraintTop_toTopOf="@id/item_monsterPA" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

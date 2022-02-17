@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import fr.tuto.dofusapi.dataClass.Monster
 import android.os.Bundle
 import android.util.Log
+import com.bumptech.glide.Glide
 
 
 class RecyclerAdapter(val context: Context) : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
@@ -30,8 +31,9 @@ class RecyclerAdapter(val context: Context) : RecyclerView.Adapter<RecyclerAdapt
     }
 
     override fun onBindViewHolder(holder: RecyclerAdapter.ViewHolder, position: Int) {
-        holder.itemTitle.text = monsterType.get(position).type
+
         holder.itemImage.setImageResource(images)
+        holder.itemTitle.text = monsterType.get(position).type
     }
 
     fun setTypeMonsters(monsterType: List<Monster>){

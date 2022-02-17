@@ -2,6 +2,7 @@ package fr.tuto.dofusapi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import fr.tuto.dofusapi.API.ApiInterface
@@ -29,6 +30,7 @@ class TypeMonsterActivity : AppCompatActivity() {
         apiInterface.enqueue(object : Callback<List<Monster>> {
             override fun onResponse(call: Call<List<Monster>>, response: Response<List<Monster>>) {
                 if (response.body() != null) {
+                    Log.e("response Json", "${response.body()}")
                     val jack = response.body()!!.distinctBy { it.type }
 
                     recyclerAdapter.setTypeMonsters(jack)

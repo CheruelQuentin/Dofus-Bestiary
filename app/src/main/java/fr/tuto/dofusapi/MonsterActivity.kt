@@ -21,7 +21,13 @@ class MonsterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_monster)
 
-        var test : ArrayList<Monster> = ArrayList()
+        val monster : ArrayList<Monster> = ArrayList()
+        var minHP : Double = 0.0
+        var maxHP : Double = 0.0
+        var minPA : Double = 0.0
+        var maxPA : Double = 0.0
+        var minPM : Double = 0.0
+        var maxPM : Double = 0.0
 
         val extras = intent.extras
         if (extras != null) {
@@ -40,20 +46,33 @@ class MonsterActivity : AppCompatActivity() {
             override fun onResponse(call: Call<List<Monster>>, response: Response<List<Monster>>) {
                 if (response.body() != null) {
                     val allMonster = response.body()
-
                     if (allMonster != null) {
                         for (monstreType in allMonster){
                             if(typeSelect == monstreType.type){
-                                test.add(Monster("",monstreType.name,monstreType.imgUrl))
+                                val stats = monstreType.stat
+                                for (stat in stats){
+                                    val pv = stat.pv
+                                    val pa = stat.pa
+                                    val pm = stat.pm
+                                        if(pv !=null){
+                                             minHP = pv.min
+                                             maxHP = pv.max
+                                        }
+                                        if(pa !=null){
+                                            minPA = pa.min
+                                            maxPA = pa.max
+                                        }
+                                        if(pm !=null){
+                                            minPM = pm.min
+                                            maxPM = pm.max
+                                        }
+                                    }
+                                monster.add(Monster("",monstreType.name,monstreType.imgUrl,
+                                    monstreType.stat, minHP, maxHP,minPA, maxPA,minPM,maxPM))
                             }
                         }
                     }
-                    Log.e("voici mon nom", "$test")
-
-                    typeSelect?.let { Log.e("je suis le type Select", it) }
-
-                    recyclerAdapter.setMonsters(test)
-                    //recyclerAdapter.setTypeMonsters(response.body()!!)
+                    recyclerAdapter.setMonsters(monster)
                 }
             }
             override fun onFailure(call: Call<List<Monster>>, t: Throwable) {
