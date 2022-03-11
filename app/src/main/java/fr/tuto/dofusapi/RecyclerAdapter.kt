@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import fr.tuto.dofusapi.dataClass.Monster
 import android.os.Bundle
 import android.util.Log
+import androidx.cardview.widget.CardView
 import com.bumptech.glide.Glide
 
 
@@ -49,6 +50,7 @@ class RecyclerAdapter(val context: Context) : RecyclerView.Adapter<RecyclerAdapt
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         var itemImage: ImageView
         var itemTitle: TextView
+
         init {
                 itemImage = itemView.findViewById(R.id.item_image)
                 itemTitle = itemView.findViewById(R.id.item_title)
@@ -56,6 +58,9 @@ class RecyclerAdapter(val context: Context) : RecyclerView.Adapter<RecyclerAdapt
                 itemTitle.setOnClickListener {
                     intent.putExtra("type", monsterType.get(position).type)
                     context.startActivity(intent) }
+                itemImage.setOnClickListener {
+                intent.putExtra("type", monsterType.get(position).type)
+                context.startActivity(intent) }
         }
     }
 }

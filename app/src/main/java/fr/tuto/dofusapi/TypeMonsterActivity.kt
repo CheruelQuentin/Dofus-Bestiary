@@ -38,7 +38,7 @@ class TypeMonsterActivity : AppCompatActivity() {
                 }
             }
             override fun onFailure(call: Call<List<Monster>>, t: Throwable) {
-                TODO("Not yet implemented")
+                Log.e("Yo","FailureTypeMonsterActivity")
             }
         })
 
