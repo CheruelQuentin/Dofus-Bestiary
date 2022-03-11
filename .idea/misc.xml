@@ -8,10 +8,17 @@
         <entry key="..\:/save/EPSI/Dofus-Bestiary/app/src/main/res/layout/activity_type_monster.xml" value="0.33" />
         <entry key="..\:/save/EPSI/Dofus-Bestiary/app/src/main/res/layout/card_layout.xml" value="0.36770833333333336" />
         <entry key="..\:/save/EPSI/Dofus-Bestiary/app/src/main/res/layout/card_layout_monster.xml" value="0.36770833333333336" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1895" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1895" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_monster.xml" value="0.26202239990234377" />
+        <entry key="app/src/main/res/layout/activity_type_monster.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/card_layout.xml" value="0.45573425292968767" />
+        <entry key="app/src/main/res/layout/card_layout_monster.xml" value="0.3146907312729779" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
