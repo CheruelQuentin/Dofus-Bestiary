@@ -67,6 +67,7 @@ class MonsterActivity : AppCompatActivity() {
                                             maxPM = pm.max
                                         }
                                     }
+
                                 monster.add(Monster("",monstreType.name,monstreType.imgUrl,
                                     monstreType.stat, minHP, maxHP,minPA, maxPA,minPM,maxPM))
                             }
