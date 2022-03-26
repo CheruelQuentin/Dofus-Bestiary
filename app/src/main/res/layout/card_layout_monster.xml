@@ -30,7 +30,7 @@
         <TextView
             android:id="@+id/item_monsterName"
             android:layout_width="236dp"
-            android:layout_height="39dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="4dp"
             android:textSize="20sp"
@@ -43,9 +43,9 @@
             android:layout_width="196dp"
             android:layout_height="37dp"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="5dp"
             app:layout_constraintLeft_toRightOf="@+id/item_monsterImage"
-            app:layout_constraintTop_toTopOf="@id/item_monsterName" />
+            app:layout_constraintTop_toBottomOf="@+id/item_monsterName" />
 
         <TextView
             android:id="@+id/item_monsterPA"
