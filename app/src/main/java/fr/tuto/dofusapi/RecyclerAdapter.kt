@@ -20,11 +20,8 @@ import com.bumptech.glide.Glide
 
 class RecyclerAdapter(val context: Context) : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
-
     private val images = R.drawable.oeuf
     var monsterType : List<Monster> = listOf()
-
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapter.ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.card_layout,parent,false)

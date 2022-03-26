@@ -16,8 +16,6 @@ class MainActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.btn_start)
         val intent : Intent = Intent(this, TypeMonsterActivity::class.java)
         button.setOnClickListener { startActivity(intent) }
-
-
     }
 }
 

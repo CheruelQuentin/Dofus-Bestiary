@@ -15,13 +15,9 @@ class TypeMonsterActivity : AppCompatActivity() {
 
     lateinit var recyclerAdapter: RecyclerAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_type_monster)
-
-
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-
         recyclerAdapter= RecyclerAdapter(this)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = recyclerAdapter
