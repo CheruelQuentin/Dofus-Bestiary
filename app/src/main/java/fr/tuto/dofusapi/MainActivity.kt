@@ -14,13 +14,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
-
 class MainActivity : AppCompatActivity(),CoroutineScope {
 
     private lateinit var username: AppCompatEditText
     private lateinit var accessDatabase: UserRoomDatabase
     private lateinit var userDao: UserDao
-
 
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.Main
