@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <item
+        android:id="@+id/allMonster"
+        app:showAsAction = "ifRoom"
+        android:icon="@drawable/groups"
+        android:title="All Monsters"/>
+    <item
+        android:id="@+id/typeMonster"
+        app:showAsAction = "ifRoom"
+        android:icon="@drawable/ic_baseline_reduce_capacity_24"
+        android:title="Monsters Type"/>
+    <item
+        android:id="@+id/monsterPV"
+        app:showAsAction = "ifRoom"
+        android:icon="@drawable/pv"
+        android:title="Monsters PV"/>
+    <item
+        android:id="@+id/monsterPM"
+        app:showAsAction = "ifRoom"
+        android:icon="@drawable/pm"
+        android:title="Monsters PM"
+        />
+    <item
+        android:id="@+id/monsterPA"
+        app:showAsAction = "ifRoom"
+        android:icon="@drawable/pa"
+        android:title="Monsters PA"/>
+</menu>

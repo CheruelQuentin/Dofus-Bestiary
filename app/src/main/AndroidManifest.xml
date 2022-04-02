@@ -13,16 +13,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DofusAPI">
         <activity
-            android:name=".MonsterActivity"
+            android:name=".activity.AllMonsters"
             android:exported="false" />
         <activity
-            android:name=".TypeMonsterActivity"
+            android:name=".activity.MonsterOrderByPV"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MonsterOrderByPA"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MonsterOrderByPM"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MonsterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.TypeMonsterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

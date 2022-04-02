@@ -1,18 +1,15 @@
-package fr.tuto.dofusapi
+package fr.tuto.dofusapi.recycler
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import fr.tuto.dofusapi.R
 import fr.tuto.dofusapi.dataClass.Monster
 
 class RecyclerAdapterMonster(val context: Context) : RecyclerView.Adapter<RecyclerAdapterMonster.ViewHolderMonster>() {
@@ -21,13 +18,14 @@ class RecyclerAdapterMonster(val context: Context) : RecyclerView.Adapter<Recycl
     private val images = R.drawable.oeuf
     var monsterType : List<Monster> = listOf()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapterMonster.ViewHolderMonster {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderMonster {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.card_layout_monster,parent,false)
         return ViewHolderMonster(v)
     }
 
     @SuppressLint("SetTextI18n")
-    override fun onBindViewHolder(holder: RecyclerAdapterMonster.ViewHolderMonster, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolderMonster, position: Int) {
+
         holder.item_monsterName.text = monsterType[position].name
         holder.item_PV.text = "PV : ${monsterType[position].pvMin}  - ${monsterType[position].pvMax} "
         holder.item_PA.text = "PA : ${monsterType[position].paMin}  - ${monsterType[position].paMax} "

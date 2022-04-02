@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.MonsterActivity"
     android:background="@drawable/ic_bg"
-    >
+    tools:context=".activity.AllMonsters">
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewMonster"

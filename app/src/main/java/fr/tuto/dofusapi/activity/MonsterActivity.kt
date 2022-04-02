@@ -1,12 +1,16 @@
-package fr.tuto.dofusapi
+package fr.tuto.dofusapi.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import fr.tuto.dofusapi.API.ApiInterface
+import fr.tuto.dofusapi.R
 import fr.tuto.dofusapi.dataClass.Monster
+import fr.tuto.dofusapi.recycler.RecyclerAdapterMonster
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -16,6 +20,7 @@ var typeSelect : String? = null
 class MonsterActivity : AppCompatActivity() {
 
     lateinit var recyclerAdapter: RecyclerAdapterMonster
+    lateinit var bottomNavigationView: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,6 +85,43 @@ class MonsterActivity : AppCompatActivity() {
                 TODO("Not yet implemented")
             }
         })
+        this.configureBottomView()
+    }
+
+    fun configureBottomView() {
+        bottomNavigationView.setOnItemSelectedListener { item -> updateFragmentBottom(item.itemId) }
+    }
+
+    fun updateFragmentBottom(integer: Int): Boolean {
+        when (integer) {
+            R.id.allMonster -> {
+                Log.e("yo","xerces")
+                val intent = Intent(this, AllMonsters::class.java)
+                startActivity(intent)
+                finish()
+            }
+            R.id.typeMonster -> {
+                val intent = Intent(this, TypeMonsterActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+            R.id.monsterPV ->{
+                val intent = Intent(this, MonsterOrderByPV::class.java)
+                startActivity(intent)
+                finish()
+            }
+            R.id.monsterPM ->{
+                val intent = Intent(this, MonsterOrderByPM::class.java)
+                startActivity(intent)
+                finish()
+            }
+            R.id.monsterPA ->{
+                val intent = Intent(this, MonsterOrderByPA::class.java)
+                startActivity(intent)
+                this.finish()
+            }
+        }
+        return true
     }
 
 }
