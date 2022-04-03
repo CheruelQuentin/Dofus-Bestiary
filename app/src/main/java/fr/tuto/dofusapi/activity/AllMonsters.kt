@@ -70,7 +70,7 @@ class AllMonsters : AppCompatActivity() {
                             )
                         }
                     }
-                    recyclerAdapter.setMonsters(monster)
+                    recyclerAdapter.setMonsters(monster.sortedBy { it.name })
                 }
             }
             override fun onFailure(call: Call<List<Monster>>, t: Throwable) {
