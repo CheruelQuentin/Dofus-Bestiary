@@ -25,6 +25,7 @@ class MonsterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_monster)
+        bottomNavigationView = findViewById(R.id.activity_main_bottom_navigation)
 
         val monster : ArrayList<Monster> = ArrayList()
         var minHP : Double = 0.0
